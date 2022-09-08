@@ -22,7 +22,7 @@ export default function NodeTypeIndex() {
       <h1>List of {nodeType} nodes:</h1>
       <ul>
         { nodes.map((node: any, index: number) => (
-          <li>
+          <li key={node.id}>
             <Link to={node.id}>{node.title}</Link>
           </li>
         ))}
